@@ -128,17 +128,16 @@ Class Custom_CSS_Meta_Box {
 	 * @return void
 	 */
 	function save_meta_data( $post_id ) {
-		
 		// verify if this is an auto save routine. If it is our form has not been submitted, so we dont want
 		// to do anything
 		if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) 
 			return $post_id;
 		
-		if ( !wp_verify_nonce( $_POST['custom_css_mate_box_noncename'], plugin_basename(__FILE__) ))
+		if (isset($_POST['custom_css_mate_box_noncename']) && !wp_verify_nonce( $_POST['custom_css_mate_box_noncename'], plugin_basename(__FILE__) ))
 				return $post_id;
 		
 		// only update the data if it is a string	
-		if( is_string( $_POST['custom_css_meta_box'] ) )
+		if(isset($_POST['custom_css_meta_box']) && is_string( $_POST['custom_css_meta_box'] ) )
 			add_post_meta( $post_id, '_custom_css', $_POST['custom_css_meta_box'], true) or update_post_meta( $post_id, '_custom_css', $_POST['custom_css_meta_box'] );
 		
 		return $post_id;
