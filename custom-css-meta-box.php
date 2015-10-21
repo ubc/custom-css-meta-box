@@ -102,10 +102,18 @@ Class Custom_CSS_Meta_Box {
 	 * @access public
 	 * @return void
 	 */
-	function display_meta_box() {
-		global $post;
-		$custom_css = get_post_meta( $post->ID, '_custom_css', true );
-   		
+	function display_meta_box( $post ) {
+
+		$post_id = $post->ID;
+
+        if ( 'attachment' === $post->post_type ) {
+                // Other plugins, such as the portoflio slideshow plugin override the global $post, which causes problems
+                $post_id = absint( $_GET['post'] );
+				$post = get_post( $post_id );
+        }
+
+		$custom_css = get_post_meta( $post_id, '_custom_css', true );
+
    		// Use nonce for verification
    		echo '<input type="hidden" name="custom_css_mate_box_noncename" id="custom_css_mate_box_noncename" value="' .wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
 
