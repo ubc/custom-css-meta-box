@@ -1,6 +1,7 @@
 {
 	"name": 		"ubc/custom-css-meta-box",
 	"description": 	"",
+	"description": 	"Abiliy to place custom CSS on individual pages and posts. Once enabled a custom text box will apear on page and post write panels and the custom CSS will be written in the Head of the HTML document.",
 	"keywords": 	[ "wordpress", "plugin" ],
 	"homepage": 	"http://github.com/ubc/",
 	"license": 		"GPLv2",
