@@ -5,7 +5,7 @@ Plugin Name: Custom CSS Meta Box
 Plugin URI:
 Description: Abiliy to place custom CSS on individual pages and posts. Once enabled a custom text box will apear on page and post write panels and the custom CSS will be written in the Head of the HTML document.
 Author: CTLT Dev
-Version: 1.0.1
+Version: 1.0.2
 Author URI:
 
 */
