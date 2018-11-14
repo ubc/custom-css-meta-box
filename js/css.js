@@ -124,13 +124,13 @@ CodeMirror.defineMode("css", function(config) {
 CodeMirror.defineMIME("text/css", "css");
 
 jQuery(document).ready(function(){
-	
+
 	var editor = CodeMirror.fromTextArea(document.getElementById("custom-css-meta-box"), {
 	  mode: "text/css",
 	  lineNumbers: true,
 	  onCursorActivity: function() {
+      hlLine = editor.setLineClass(editor.getCursor().line, "activeline");
 	    editor.setLineClass(hlLine, null);
-	    hlLine = editor.setLineClass(editor.getCursor().line, "activeline");
 	  }
 	});
 });
