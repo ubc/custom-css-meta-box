@@ -76,7 +76,7 @@ Class Custom_CSS_Meta_Box {
 		wp_enqueue_script( 'codemirror',  plugins_url( 'custom-css-meta-box/js/codemirror.js' ), array( 'jquery' ), self::$plugin_ver, true );
 		wp_enqueue_script( 'codemirror-script-css', plugins_url( 'custom-css-meta-box/js/css.js' ), array( 'codemirror' ), self::$plugin_ver, true );
 		// add just the styles
-		wp_enqueue_style( 'codemirror-style', plugins_url( 'custom-css-meta-box/css/codemirror.css' ) );
+		wp_enqueue_style( 'css-metabox-codemirror-style', plugins_url( 'custom-css-meta-box/css/codemirror.css', self::$plugin_ver, true ) );
 
 	}
 
