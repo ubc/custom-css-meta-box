@@ -1,23 +1,24 @@
-.CodeMirror {
+#custom_css_meta_box .CodeMirror {
   line-height: 1em;
   font-family: monospace;
   width: 100%;
   background: #FFF;
   border:1px solid #CCC;
+  height: auto;
 }
 
-.CodeMirror-scroll {
+#custom_css_meta_box .CodeMirror-scroll {
   height: auto;
   overflow-y: hidden;
   overflow-x: auto;
-  width: 100%
+  width: 100%;
   min-height:100px;
     /* This is needed to prevent an IE[67] bug where the scrolled content
      is visible outside of the scrolling box. */
   position: relative;
 }
 
-.CodeMirror-gutter {
+#custom_css_meta_box .CodeMirror-gutter {
   position: absolute; left: 0; top: 0;
   z-index: 10;
   background-color: #f7f7f7;
@@ -25,17 +26,17 @@
   min-width: 2em;
   height: 100%;
 }
-.CodeMirror-gutter-text {
+#custom_css_meta_box .CodeMirror-gutter-text {
   color: #aaa;
   text-align: right;
   padding: .4em .2em .4em .4em;
   white-space: pre !important;
 }
-.CodeMirror-lines {
+#custom_css_meta_box .CodeMirror-lines {
   padding: .4em;
 }
 
-.CodeMirror pre {
+#custom_css_meta_box .CodeMirror pre {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   -o-border-radius: 0;
@@ -48,60 +49,60 @@
   word-wrap: normal;
 }
 
-.CodeMirror-wrap pre {
+#custom_css_meta_box .CodeMirror-wrap pre {
   word-wrap: break-word;
   white-space: pre-wrap;
 }
-.CodeMirror-wrap .CodeMirror-scroll {
+#custom_css_meta_box .CodeMirror-wrap .CodeMirror-scroll {
   overflow-x: hidden;
 }
 
-.CodeMirror textarea {
+#custom_css_meta_box .CodeMirror textarea {
   font-family: inherit !important;
   font-size: inherit !important;
 }
 
-.CodeMirror-cursor {
+#custom_css_meta_box .CodeMirror-cursor {
   z-index: 10;
   position: absolute;
   visibility: hidden;
   border-left: 1px solid black !important;
 }
-.CodeMirror-focused .CodeMirror-cursor {
+#custom_css_meta_box .CodeMirror-focused .CodeMirror-cursor {
   visibility: visible;
 }
 
-span.CodeMirror-selected {
+#custom_css_meta_box span.CodeMirror-selected {
   background: #ccc !important;
   color: HighlightText !important;
 }
-.CodeMirror-focused span.CodeMirror-selected {
+#custom_css_meta_box .CodeMirror-focused span.CodeMirror-selected {
   background: Highlight !important;
 }
 
-.CodeMirror-matchingbracket {color: #0f0 !important;}
-.CodeMirror-nonmatchingbracket {color: #f22 !important;}
+#custom_css_meta_box .CodeMirror-matchingbracket {color: #0f0 !important;}
+#custom_css_meta_box .CodeMirror-nonmatchingbracket {color: #f22 !important;}
 
 /* default code mirror theme */
-.cm-s-default span.cm-keyword {color: #708;}
-.cm-s-default span.cm-atom {color: #219;}
-.cm-s-default span.cm-number {color: #164;}
-.cm-s-default span.cm-def {color: #00f;}
-.cm-s-default span.cm-variable {color: black;}
-.cm-s-default span.cm-variable-2 {color: #05a;}
-.cm-s-default span.cm-variable-3 {color: #085;}
-.cm-s-default span.cm-property {color: black;}
-.cm-s-default span.cm-operator {color: black;}
-.cm-s-default span.cm-comment {color: #a50;}
-.cm-s-default span.cm-string {color: #a11;}
-.cm-s-default span.cm-string-2 {color: #f50;}
-.cm-s-default span.cm-meta {color: #555;}
-.cm-s-default span.cm-error {color: #f00;}
-.cm-s-default span.cm-qualifier {color: #555;}
-.cm-s-default span.cm-builtin {color: #30a;}
-.cm-s-default span.cm-bracket {color: #cc7;}
-.cm-s-default span.cm-tag {color: #170;}
-.cm-s-default span.cm-attribute {color: #00c;}
+#custom_css_meta_box .cm-s-default span.cm-keyword {color: #708;}
+#custom_css_meta_box .cm-s-default span.cm-atom {color: #219;}
+#custom_css_meta_box .cm-s-default span.cm-number {color: #164;}
+#custom_css_meta_box .cm-s-default span.cm-def {color: #00f;}
+#custom_css_meta_box .cm-s-default span.cm-variable {color: black;}
+#custom_css_meta_box .cm-s-default span.cm-variable-2 {color: #05a;}
+#custom_css_meta_box .cm-s-default span.cm-variable-3 {color: #085;}
+#custom_css_meta_box .cm-s-default span.cm-property {color: black;}
+#custom_css_meta_box .cm-s-default span.cm-operator {color: black;}
+#custom_css_meta_box .cm-s-default span.cm-comment {color: #a50;}
+#custom_css_meta_box .cm-s-default span.cm-string {color: #a11;}
+#custom_css_meta_box .cm-s-default span.cm-string-2 {color: #f50;}
+#custom_css_meta_box .cm-s-default span.cm-meta {color: #555;}
+#custom_css_meta_box .cm-s-default span.cm-error {color: #f00;}
+#custom_css_meta_box .cm-s-default span.cm-qualifier {color: #555;}
+#custom_css_meta_box .cm-s-default span.cm-builtin {color: #30a;}
+#custom_css_meta_box .cm-s-default span.cm-bracket {color: #cc7;}
+#custom_css_meta_box .cm-s-default span.cm-tag {color: #170;}
+#custom_css_meta_box .cm-s-default span.cm-attribute {color: #00c;}
 
 
 
