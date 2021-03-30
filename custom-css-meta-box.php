@@ -12,7 +12,7 @@ Author URI:
 
 Class Custom_CSS_Meta_Box {
 	static $instance;
-	private static $plugin_ver = '1.0.3';
+	private static $plugin_ver = '1.0.4';
 
 	function __construct() {
 		self::$instance = $this;
