@@ -124,14 +124,18 @@ CodeMirror.defineMode("css", function(config) {
 CodeMirror.defineMIME("text/css", "css");
 
 jQuery(document).ready(function(){
-	
-	var editor = CodeMirror.fromTextArea(document.getElementById("custom-css-meta-box"), {
+  var metafield = document.getElementById("custom-css-meta-box");
+	var editor = CodeMirror.fromTextArea(metafield, {
 	  mode: "text/css",
 	  lineNumbers: true,
 	  onCursorActivity: function() {
+      hlLine = editor.setLineClass(editor.getCursor().line, "activeline");
 	    editor.setLineClass(hlLine, null);
-	    hlLine = editor.setLineClass(editor.getCursor().line, "activeline");
-	  }
+	  },
+    onChange: function (cm) {
+      editor.save();
+    }
 	});
+  setTimeout(function(){ editor.refresh(); }, 1000);
 });
 

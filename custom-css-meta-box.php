@@ -5,13 +5,14 @@ Plugin Name: Custom CSS Meta Box
 Plugin URI:
 Description: Abiliy to place custom CSS on individual pages and posts. Once enabled a custom text box will apear on page and post write panels and the custom CSS will be written in the Head of the HTML document.
 Author: CTLT Dev
-Version: 1.0.2
+Version: 1.0.3
 Author URI:
 
 */
 
 Class Custom_CSS_Meta_Box {
 	static $instance;
+	private static $plugin_ver = '1.0.4';
 
 	function __construct() {
 		self::$instance = $this;
@@ -72,10 +73,10 @@ Class Custom_CSS_Meta_Box {
 		if( !in_array($post->post_type, array('post','page') ) )
 			return;
 		// add javascript
-		wp_enqueue_script( 'codemirror',  plugins_url( 'custom-css-meta-box/js/codemirror.js' ), array( 'jquery' ) );
-		wp_enqueue_script( 'codemirror-script-css', plugins_url( 'custom-css-meta-box/js/css.js' ), array( 'codemirror' ) );
+		wp_enqueue_script( 'codemirror',  plugins_url( 'custom-css-meta-box/js/codemirror.js' ), array( 'jquery' ), self::$plugin_ver, true );
+		wp_enqueue_script( 'codemirror-script-css', plugins_url( 'custom-css-meta-box/js/css.js' ), array( 'codemirror' ), self::$plugin_ver, true );
 		// add just the styles
-		wp_enqueue_style( 'codemirror-style', plugins_url( 'custom-css-meta-box/css/codemirror.css' ) );
+		wp_enqueue_style( 'css-metabox-codemirror-style', plugins_url( 'custom-css-meta-box/css/codemirror.css', self::$plugin_ver, true ) );
 
 	}
 
